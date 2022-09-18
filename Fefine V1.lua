@@ -8,7 +8,7 @@ local World = Window:NewTab("World")
 
 local Instances = World:NewSection("Instances")
 
-Instances:NewSlider("AntiVoid Bounce Amount", "How far you bounce when antivoid activates.", 500, 50, function(s)
+Instances:NewSlider("Bounce Amount", "How far you bounce when antivoid activates.", 500, 50, function(s)
     bounceamount = s
 end)
 
@@ -43,4 +43,14 @@ end)
 
 HumanoidControl:NewSlider("JumpPower", "Changes your jumppower.", 500, 50 , function(s)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+local More = Blantant:NewSection("More")
+
+More:NewToggle("Aura (Bedwars)", "ToggleInfo", function(state)
+    if state then
+        print("Toggle On")
+    else
+        print("Toggle Off")
+    end
 end)
