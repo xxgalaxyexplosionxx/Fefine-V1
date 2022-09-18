@@ -19,7 +19,7 @@ Instances:NewSlider("Bounce Amount", "How far you bounce when antivoid activates
     bounceamount = s
 end)
 
-Section:NewColorPicker("AntiVoid Color", "The color of the antivoid.", Color3.fromRGB(0,0,0), function(color)
+Instances:NewColorPicker("AntiVoid Color", "The color of the antivoid.", Color3.fromRGB(0,0,0), function(color)
     print(color)
     antivoidcolor = color
 end)
