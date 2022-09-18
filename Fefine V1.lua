@@ -18,7 +18,7 @@ Instances:NewToggle("AntiVoid", "Prevents you from falling into the void (In bed
 		voidjump.Parent = workspace
 		voidjump.Name = "AntiVoid"
 		voidjump.Position = Vector3.new(0, game.Players.LocalPlayer.Character.HumanoidRootPart.Position.Y - 50, 52)
-		voidjump.Size = Vector3.new(512, 8, 512)
+		voidjump.Size = Vector3.new(1000, 8, 1000)
 		voidjump.Anchored = true
 		voidjump.Color = Color3.fromRGB(56, 255, 249)
 		voidjump.CanCollide = false
