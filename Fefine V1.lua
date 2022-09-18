@@ -1,6 +1,5 @@
 local startergui = game:GetService("StarterGui")
-
-local noclip = false
+antivoidcolor = nil
 
 startergui:SetCore("SendNotification", {
 	Title = "Injected Fefine!",
@@ -20,6 +19,11 @@ Instances:NewSlider("Bounce Amount", "How far you bounce when antivoid activates
     bounceamount = s
 end)
 
+Section:NewColorPicker("AntiVoid Color", "The color of the antivoid.", Color3.fromRGB(0,0,0), function(color)
+    print(color)
+    antivoidcolor = color
+end)
+
 Instances:NewToggle("AntiVoid", "Prevents you from falling into the void.", function(state)
 	if state then
 		voidjump = Instance.new("Part")
@@ -28,7 +32,7 @@ Instances:NewToggle("AntiVoid", "Prevents you from falling into the void.", func
 		voidjump.Position = Vector3.new(0, game.Players.LocalPlayer.Character.HumanoidRootPart.Position.Y - 50, 0)
 		voidjump.Size = Vector3.new(1000, 8, 1000)
 		voidjump.Anchored = true
-		voidjump.Color = Color3.fromRGB(56, 255, 249)
+		voidjump.Color = antivoidcolor
 		voidjump.CanCollide = false
 		game.Players.LocalPlayer.Character.HumanoidRootPart.Touched:Connect(function(part)
             		if part.Name == "AntiVoid" then
