@@ -47,10 +47,12 @@ end)
 
 local More = Blantant:NewSection("More")
 
-More:NewToggle("Aura (Bedwars)", "ToggleInfo", function(state)
+Section:NewToggle("Noclip", "Clips you through walls.", function(state)
     if state then
-        print("Toggle On")
+        game.Players.LocalPlayer.Character.Torso.CanCollide = false
+	game.Players.LocalPlayer.Character.Head.CanCollide = false
     else
-        print("Toggle Off")
+        game.Players.LocalPlayer.Character.Torso.CanCollide = true
+	game.Players.LocalPlayer.Character.Head.CanCollide = true
     end
 end)
