@@ -54,6 +54,8 @@ More:NewToggle("Noclip", "Clips you through walls.", function(state)
 			part.Transparency = 0.5
 			part.CanCollide = false
 		until game.Players.LocalPlayer.Character.Torso.TouchEnded
+		part.Transparency = 0
+		part.CanCollide = true
 	end)
     else
         
