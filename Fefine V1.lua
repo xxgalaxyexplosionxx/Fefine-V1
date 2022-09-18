@@ -1,3 +1,9 @@
+local startergui = game:GetService("StarterGui")
+
+startergui:SetCore("SendNotification", {
+	Title = "Injected Fefine!"
+	Text = "Fefine has successfully been injected."
+})
 voidjump = nil
 bounceamount = 50
 
