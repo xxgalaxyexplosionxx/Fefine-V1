@@ -1,5 +1,5 @@
 voidjump = nil
-local bounceamount = 5
+local bounceamount = 50
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Fefine V1", "Synapse")
@@ -8,7 +8,7 @@ local World = Window:NewTab("World")
 
 local Instances = World:NewSection("Instances")
 
-Instances:NewSlider("AntiVoid Bounce Amount", "How far you bounce when antivoid activates.", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+Instances:NewSlider("AntiVoid Bounce Amount", "How far you bounce when antivoid activates.", 500, 50, function(s)
     bounceamount = s
 end)
 
