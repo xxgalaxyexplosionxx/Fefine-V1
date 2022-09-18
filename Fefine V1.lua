@@ -40,6 +40,9 @@ Instances:NewToggle("AntiVoid", "Prevents you from falling into the void.", func
             		end
 		end)
         	voidjump.Transparency = 0.8
+		while state == true do
+			voidjump.Color = antivoidcolor
+		end
 	else
 		game.Workspace.AntiVoid:Destroy()
 	end
