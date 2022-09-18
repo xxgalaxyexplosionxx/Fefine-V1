@@ -34,7 +34,7 @@ Instances:NewToggle("AntiVoid", "Prevents you from falling into the void (In bed
 		end)
         	voidjump.Transparency = 0.8
 			
-		while wait(0.1) then
+		while wait(0.1) do
 			voidjump.Position = Vector3.new(0, antivoidy, 0)
 		end
 	else
