@@ -1,4 +1,5 @@
 voidjump = nil
+local bounceamount = 5
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Fefine V1", "Synapse")
@@ -6,6 +7,10 @@ local Window = Library.CreateLib("Fefine V1", "Synapse")
 local World = Window:NewTab("World")
 
 local Section = World:NewSection("Instances")
+
+Section:NewSlider("AntiVoid Bounce Amount", "How far you bounce when antivoid activates.", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    bounceamount = s
+end)
 
 Section:NewToggle("AntiVoid", "Prevents you from falling into the void (In bedwars, Abusing may cause lagbacks.)", function(state)
 	if state then
@@ -19,7 +24,7 @@ Section:NewToggle("AntiVoid", "Prevents you from falling into the void (In bedwa
 		voidjump.CanCollide = false
 		game.Players.LocalPlayer.Character.HumanoidRootPart.Touched:Connect(function(part)
             		if part.Name == "AntiVoid" then
-                		game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0, 100, 0)
+                		game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0, bounceamount, 0)
             		end
 		end)
         	voidjump.Transparency = 0.5
