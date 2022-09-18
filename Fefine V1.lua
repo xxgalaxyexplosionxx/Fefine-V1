@@ -49,15 +49,9 @@ local More = Blantant:NewSection("More")
 
 More:NewToggle("Noclip", "Clips you through walls.", function(state)
     if state then
-        game.Players.LocalPlayer.Character.Torso.Touched:Connect(function(part)
-		repeat
-			part.Transparency = 0.5
-			part.CanCollide = false
-		until game.Players.LocalPlayer.Character.Torso.TouchEnded
-		part.Transparency = 0
-		part.CanCollide = true
-	end)
+	local noclip = true
+        char = game.Players.LocalPlayer.Character while true do if noclip == true then for _,v in pairs(char:children()) do pcall(function() if v.className == "Part" then v.CanCollide = false elseif v.ClassName == "Model" then v.Head.CanCollide = false end end) end end game:service("RunService").Stepped:wait() end
     else
-        
+        local noclip = false
     end
 end)
