@@ -1,5 +1,5 @@
 voidjump = nil
-local bounceamount = 50
+bounceamount = 50
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Fefine V1", "Synapse")
@@ -27,7 +27,7 @@ Instances:NewToggle("AntiVoid", "Prevents you from falling into the void (In bed
                 		game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0, bounceamount, 0)
             		end
 		end)
-        	voidjump.Transparency = 0.5
+        	voidjump.Transparency = 0.8
 	else
 		game.Workspace.AntiVoid:Destroy()
 	end
