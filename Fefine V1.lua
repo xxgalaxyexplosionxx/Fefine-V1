@@ -22,7 +22,7 @@ Section:NewToggle("AntiVoid", "Prevents you from falling into the void (In bedwa
                 		game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0, 100, 0)
             		end
 		end)
-        voidjump.Transparency = 0.5
+        	voidjump.Transparency = 0.5
 	else
 		game.Workspace.AntiVoid:Destroy()
 	end
