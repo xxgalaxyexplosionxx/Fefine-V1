@@ -1,5 +1,5 @@
 local startergui = game:GetService("StarterGui")
-antivoidcolor = nil
+antivoidcolor = 64, 147, 255
 
 startergui:SetCore("SendNotification", {
 	Title = "Injected Fefine!",
@@ -39,9 +39,6 @@ Instances:NewToggle("AntiVoid", "Prevents you from falling into the void.", func
             		end
 		end)
         	voidjump.Transparency = 0.8
-		while state == true do
-			voidjump.Color = antivoidcolor
-		end
 	else
 		game.Workspace.AntiVoid:Destroy()
 	end
