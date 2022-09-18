@@ -1,8 +1,8 @@
 local startergui = game:GetService("StarterGui")
 
 startergui:SetCore("SendNotification", {
-	Title = "Injected Fefine!"
-	Text = "Fefine has successfully been injected."
+	Title = "Injected Fefine!",
+	Text = "Fefine has successfully been injected.",
 })
 voidjump = nil
 bounceamount = 50
@@ -39,9 +39,9 @@ Instances:NewToggle("AntiVoid", "Prevents you from falling into the void (In bed
 	end
 end)
 
-local Blantant = Window:NewTab("Blantant")
+local Blatant = Window:NewTab("Blantant")
 
-local HumanoidControl = Blantant:NewSection("Humanoid Control")
+local HumanoidControl = Blatant:NewSection("Humanoid Control")
 
 HumanoidControl:NewSlider("WalkSpeed", "Changes your walkspeed.", 500, 16, function(s)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
@@ -51,12 +51,12 @@ HumanoidControl:NewSlider("JumpPower", "Changes your jumppower.", 500, 50 , func
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
 
-local More = Blantant:NewSection("More")
+local More = Blatant:NewSection("More")
 
 More:NewToggle("Noclip", "Clips you through walls.", function(state)
     if state then
 	local noclip = true
-        char = game.Players.LocalPlayer.Character while true do if noclip == true then for _,v in pairs(char:children()) do pcall(function() if v.className == "Part" then v.CanCollide = false elseif v.ClassName == "Model" then v.Head.CanCollide = false end end) end end game:service("RunService").Stepped:wait() end
+        char = game.Players.LocalPlayer.Character while state do if noclip == true then for _,v in pairs(char:children()) do pcall(function() if v.className == "Part" then v.CanCollide = false elseif v.ClassName == "Model" then v.Head.CanCollide = false end end) end end game:service("RunService").Stepped:wait() end
     else
         local noclip = false
     end
