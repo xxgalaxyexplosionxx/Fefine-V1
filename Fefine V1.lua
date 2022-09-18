@@ -18,7 +18,7 @@ Section:NewToggle("AntiVoid", "Prevents you from falling into the void (In bedwa
 		voidjump.Color = Color3.fromRGB(56, 255, 249)
 		game.Players.LocalPlayer.Character.HumanoidRootPart.Touched:Connect(function(part)
             		if part.Name == "AntiVoid" then
-                		game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0, 50, 0)
+                		game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0, 100, 0)
             		end
 		end)
         voidjump.Transparency = 0.5
