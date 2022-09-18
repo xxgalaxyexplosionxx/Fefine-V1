@@ -13,7 +13,7 @@ Instances:NewSlider("Bounce Amount", "How far you bounce when antivoid activates
     bounceamount = s
 end)
 
-Instances:NewSlider("AntiVoid Y", "The Y Position of the antivoid.", 500, 50, function(s)
+Instances:NewSlider("AntiVoid Y", "The Y Position of the antivoid.", 500, -500, function(s)
     antivoidy = s
 end)
 
@@ -33,6 +33,10 @@ Instances:NewToggle("AntiVoid", "Prevents you from falling into the void (In bed
             		end
 		end)
         	voidjump.Transparency = 0.8
+			
+		while wait(0.1) then
+			voidjump.Position = Vector3.new(0, antivoidy, 0)
+		end
 	else
 		game.Workspace.AntiVoid:Destroy()
 	end
