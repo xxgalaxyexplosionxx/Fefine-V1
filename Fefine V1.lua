@@ -1,5 +1,7 @@
 local startergui = game:GetService("StarterGui")
 
+local noclip = false
+
 startergui:SetCore("SendNotification", {
 	Title = "Injected Fefine!",
 	Text = "Fefine has successfully been injected.",
@@ -18,7 +20,7 @@ Instances:NewSlider("Bounce Amount", "How far you bounce when antivoid activates
     bounceamount = s
 end)
 
-Instances:NewToggle("AntiVoid", "Prevents you from falling into the void (In bedwars, Abusing may cause lagbacks.)", function(state)
+Instances:NewToggle("AntiVoid", "Prevents you from falling into the void.", function(state)
 	if state then
 		voidjump = Instance.new("Part")
 		voidjump.Parent = workspace
@@ -53,11 +55,4 @@ end)
 
 local More = Blatant:NewSection("More")
 
-More:NewToggle("Noclip", "Clips you through walls.", function(state)
-    if state then
-	local noclip = true
-        char = game.Players.LocalPlayer.Character while state do if noclip == true then for _,v in pairs(char:children()) do pcall(function() if v.className == "Part" then v.CanCollide = false elseif v.ClassName == "Model" then v.Head.CanCollide = false end end) end end game:service("RunService").Stepped:wait() end
-    else
-        local noclip = false
-    end
-end)
+More:NewLabel("Its a dead end!")
