@@ -6,13 +6,13 @@ local Window = Library.CreateLib("Fefine V1", "Synapse")
 
 local World = Window:NewTab("World")
 
-local Section = World:NewSection("Instances")
+local Instances = World:NewSection("Instances")
 
-Section:NewSlider("AntiVoid Bounce Amount", "How far you bounce when antivoid activates.", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+Instances:NewSlider("AntiVoid Bounce Amount", "How far you bounce when antivoid activates.", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
     bounceamount = s
 end)
 
-Section:NewToggle("AntiVoid", "Prevents you from falling into the void (In bedwars, Abusing may cause lagbacks.)", function(state)
+Instances:NewToggle("AntiVoid", "Prevents you from falling into the void (In bedwars, Abusing may cause lagbacks.)", function(state)
 	if state then
 		voidjump = Instance.new("Part")
 		voidjump.Parent = workspace
