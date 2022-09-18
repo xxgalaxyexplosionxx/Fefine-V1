@@ -47,7 +47,7 @@ end)
 
 local More = Blantant:NewSection("More")
 
-Section:NewToggle("Noclip", "Clips you through walls.", function(state)
+More:NewToggle("Noclip", "Clips you through walls.", function(state)
     if state then
         game.Players.LocalPlayer.Character.Torso.CanCollide = false
 	game.Players.LocalPlayer.Character.Head.CanCollide = false
