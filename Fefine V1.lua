@@ -14,7 +14,7 @@ Instances:NewSlider("Bounce Amount", "How far you bounce when antivoid activates
 end)
 
 Instances:NewSlider("AntiVoid Y", "The Y Position of the antivoid.", 500, 50, function(s)
-    bounceamount = s
+    antivoidy = s
 end)
 
 Instances:NewToggle("AntiVoid", "Prevents you from falling into the void (In bedwars, Abusing may cause lagbacks.)", function(state)
