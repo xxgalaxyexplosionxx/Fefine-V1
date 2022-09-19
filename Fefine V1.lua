@@ -50,20 +50,3 @@ end)
 HumanoidControl:NewSlider("JumpPower", "Changes your jumppower.", 500, 50 , function(s)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
-
-noclip = false
-game:GetService('RunService').Stepped:connect(function()
-if noclip then
-game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
-end
-end)
-plr = game.Players.LocalPlayer
-mouse = plr:GetMouse()
-mouse.KeyDown:connect(function(key)
-
-local More = Blatant:NewSection("More")
-
-More:NewKeybind("Noclip", "Your character walks through walls.", Enum.KeyCode.F, function()
-	noclip = not noclip
-	game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
-end)
