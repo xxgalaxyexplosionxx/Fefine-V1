@@ -54,3 +54,5 @@ end)
 HumanoidControl:NewButton("Jump", "Makes your character jump no matter where you are.", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0, game.Players.LocalPlayer.Character.Humanoid.JumpPower, 0)
 end)
+
+local Combat = Window:NewTab("Combat")
