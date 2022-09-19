@@ -51,6 +51,6 @@ HumanoidControl:NewSlider("JumpPower", "Changes your jumppower.", 500, 50 , func
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
 
-Section:NewButton("Jump", "Makes your character jump no matter where you are.", function()
+HumanoidControl:NewButton("Jump", "Makes your character jump no matter where you are.", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0, game.Players.LocalPlayer.Character.Humanoid.JumpPower, 0)
 end)
