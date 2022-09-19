@@ -39,7 +39,7 @@ Instances:NewToggle("AntiVoid", "Prevents you from falling into the void.", func
 	end
 end)
 
-local Blatant = Window:NewTab("Blantant")
+local Blatant = Window:NewTab("Blatant")
 
 local HumanoidControl = Blatant:NewSection("Humanoid Control")
 
@@ -51,6 +51,19 @@ HumanoidControl:NewSlider("JumpPower", "Changes your jumppower.", 500, 50 , func
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
 
+noclip = false
+game:GetService('RunService').Stepped:connect(function()
+if noclip then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+plr = game.Players.LocalPlayer
+mouse = plr:GetMouse()
+mouse.KeyDown:connect(function(key)
+
 local More = Blatant:NewSection("More")
 
-More:NewLabel("Its a dead end!")
+More:NewKeybind("Noclip", "Your character walks through walls.", Enum.KeyCode.F, function()
+	noclip = not noclip
+	game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end)
