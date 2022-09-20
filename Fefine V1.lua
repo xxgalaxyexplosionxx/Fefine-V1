@@ -57,7 +57,7 @@ end)
 
 local Utility = Window:NewTab("Utility")
 
-local Automatic = Tab:NewSection("Automatic")
+local Automatic = Utility:NewSection("Automatic")
 
 Automatic:NewToggle("AutoToxic", "Gets Toxic", function(state)
     if state then
