@@ -55,4 +55,13 @@ HumanoidControl:NewButton("Jump", "Makes your character jump no matter where you
     game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0, game.Players.LocalPlayer.Character.Humanoid.JumpPower, 0)
 end)
 
-local Combat = Window:NewTab("Combat")
+local Utility = Window:NewTab("Utility")
+
+local Automatic = Tab:NewSection("Automatic")
+
+Automatic:NewToggle("AutoToxic", "Gets Toxic", function(state)
+    if state then
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("EZ L TRASH KIDS | fefine on top")
+	wait(math.random(1,100))
+    end
+end)
