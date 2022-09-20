@@ -66,6 +66,6 @@ Chat:NewButton("Toxic", "Sends a toxic message", function()
 	elseif message == 2 then
 		game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("L THIS GAME IS SO EZ | fefine on top", "All")
 	elseif message == 3 then
-		game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I dont care about the fact that im hacking, I care about the fact how you died in a blocky game 💀 | fefine on top", "All")
+		game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I dont care about the fact that im hacking, I care about the fact how you died in a blocky game :skul: | fefine on top", "All")
 	end
 end)
