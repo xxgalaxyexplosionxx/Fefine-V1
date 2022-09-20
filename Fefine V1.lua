@@ -61,7 +61,7 @@ local Automatic = Utility:NewSection("Automatic")
 
 Automatic:NewToggle("AutoToxic", "Gets Toxic", function(state)
     if state then
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("EZ L TRASH KIDS | fefine on top")
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("EZ L TRASH KIDS | fefine on top", "All")
 	wait(math.random(1,100))
     end
 end)
