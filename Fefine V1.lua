@@ -61,11 +61,11 @@ local Chat = Utility:NewSection("Chat")
 
 Chat:NewButton("Toxic", "Sends a toxic message", function()
 	local message = math.random(1, 3)
-	if message = 1 then
+	if message == 1 then
 		game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("EZ L TRASH KIDS | fefine on top", "All")
-	elseif message = 2 then
+	elseif message == 2 then
 		game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("L THIS GAME IS SO EZ | fefine on top", "All")
-	elseif message = 3 then
+	elseif message == 3 then
 		game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I dont care about the fact that im hacking, I care about the fact how you died in a blocky game 💀 | fefine on top", "All")
 	end
 end)
