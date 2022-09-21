@@ -33,6 +33,10 @@ Instances:NewToggle("AntiVoid", "Prevents you from falling into the void.", func
                 		game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0, bounceamount, 0)
             		end
 		end)
+			
+		if game.Players.LocalPlayer.Character.HumanoidRootPart.Y < voidjump.Position.Y then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0, bounceamount, 0)
+		end
         	voidjump.Transparency = 0.8
 	else
 		game.Workspace.AntiVoid:Destroy()
