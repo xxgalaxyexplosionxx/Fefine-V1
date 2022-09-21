@@ -55,7 +55,7 @@ HumanoidControl:NewButton("Jump", "Makes your character jump no matter where you
     game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0, game.Players.LocalPlayer.Character.Humanoid.JumpPower, 0)
 end)
 
-Section:NewButton("Fly", "Makes your character stay up in the air.", function()
+HumanoidControl:NewButton("Fly", "Makes your character stay up in the air.", function()
     local seconds = 3
     local playerY = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.Y
     while wait(0.1) do
