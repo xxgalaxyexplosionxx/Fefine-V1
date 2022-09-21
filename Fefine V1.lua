@@ -55,6 +55,16 @@ HumanoidControl:NewButton("Jump", "Makes your character jump no matter where you
     game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0, game.Players.LocalPlayer.Character.Humanoid.JumpPower, 0)
 end)
 
+Section:NewButton("Fly", "Makes your character stay up in the air.", function()
+    local seconds = 3
+    local normalgrav = game.Workspace.Gravity
+    while wait(0.1) do
+	seconds = seconds - 0.1
+	game.Workspace.Gravity = 0
+    end
+    game.Workspace.Gravity = normalgrav
+end)
+
 local Utility = Window:NewTab("Utility")
 
 local Chat = Utility:NewSection("Chat")
