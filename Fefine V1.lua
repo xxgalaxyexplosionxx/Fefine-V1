@@ -24,7 +24,7 @@ Instances:NewToggle("AntiVoid", "Prevents you from falling into the void.", func
 		voidjump.Parent = workspace
 		voidjump.Name = "AntiVoid"
 		voidjump.Position = Vector3.new(0, game.Players.LocalPlayer.Character.HumanoidRootPart.Position.Y - 18, 0)
-		voidjump.Size = Vector3.new(10000, 8, 10000)
+		voidjump.Size = Vector3.new(1000000000000000000000, 8, 10000000000000000000000)
 		voidjump.Anchored = true
 		voidjump.Color = Color3.fromRGB(64, 147, 255)
 		voidjump.CanCollide = false
