@@ -71,3 +71,9 @@ end)
 Chat:NewButton("Care", "Sends a message that indicates you dont care.", function()
 	game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I don't care about the fact that I'm hacking, I care about the fact how you died in a blocky game :skull: | fefine on top", "All")
 end)
+
+local Info = Window:NewTab("Info")
+
+local XploitInformation = Info:NewSection("Exploit Information")
+
+XploitInformation:NewLabel("Version - V1.0.8")
