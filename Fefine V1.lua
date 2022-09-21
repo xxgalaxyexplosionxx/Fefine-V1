@@ -76,4 +76,4 @@ local Info = Window:NewTab("Info")
 
 local XploitInformation = Info:NewSection("Exploit Information")
 
-XploitInformation:NewLabel("Version - V1.0.0")
+XploitInformation:NewLabel("Version - V1.0.3")
