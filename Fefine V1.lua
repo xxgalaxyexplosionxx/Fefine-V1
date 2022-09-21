@@ -21,10 +21,9 @@ end)
 Instances:NewToggle("AntiVoid", "Prevents you from falling into the void.", function(state)
 	if state then
 		voidjump = Instance.new("Part")
-		local voidY = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.Y - 18
 		voidjump.Parent = workspace
 		voidjump.Name = "AntiVoid"
-		voidjump.Position = Vector3.new(0, voidY, 0)
+		voidjump.Position = Vector3.new(0, game.Players.LocalPlayer.Character.HumanoidRootPart.Position.Y - 18, 0)
 		voidjump.Size = Vector3.new(25, 5, 25)
 		voidjump.Anchored = true
 		voidjump.Color = Color3.fromRGB(64, 147, 255)
@@ -32,7 +31,6 @@ Instances:NewToggle("AntiVoid", "Prevents you from falling into the void.", func
 		game.Players.LocalPlayer.Character.HumanoidRootPart.Touched:Connect(function(part)
             		if part.Name == "AntiVoid" then
                 		game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0, bounceamount, 0)
-				voidjump.Position = Vector3.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position.X, voidY, game.Players.LocalPlayer.Character.HumanoidRootPart.Position.Z)
             		end
 		end)
         	voidjump.Transparency = 0.8
