@@ -55,22 +55,12 @@ HumanoidControl:NewButton("Jump", "Makes your character jump no matter where you
     game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0, game.Players.LocalPlayer.Character.Humanoid.JumpPower, 0)
 end)
 
-HumanoidControl:NewButton("Fly", "Makes your character stay up in the air.", function()
-    local seconds = 4
-    local playerY = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.Y
-    while seconds > 0 do
-	seconds = seconds - 0.5
-	game.Players.LocalPlayer.Character.HumanoidRootPart.Position = Vector3.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position.X, playerY, game.Players.LocalPlayer.Character.HumanoidRootPart.Position.Z)
-    end
-    
-end)
-
 local Utility = Window:NewTab("Utility")
 
 local Chat = Utility:NewSection("Chat")
 
 Chat:NewButton("Toxic", "Sends a toxic message", function()
-	local message = math.random(1, 3)
+	local message = math.random(1, 2)
 	if message == 1 then
 		game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("EZ L TRASH KIDS | fefine on top", "All")
 	elseif message == 2 then
