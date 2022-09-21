@@ -57,10 +57,10 @@ end)
 
 Section:NewButton("Fly", "Makes your character stay up in the air.", function()
     local seconds = 3
-    local normalgrav = game.Workspace.Gravity
+    local playerY = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.Y
     while wait(0.1) do
 	seconds = seconds - 0.1
-	game.Workspace.Gravity = 0
+	game.Players.LocalPlayer.Character.HumanoidRootPart.Position = Vector3.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position.X, playerY, game.Players.LocalPlayer.Character.HumanoidRootPart.Position.Z)
     end
     game.Workspace.Gravity = normalgrav
 end)
